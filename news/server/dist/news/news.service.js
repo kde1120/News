@@ -14,12 +14,20 @@ let NewsService = class NewsService {
     constructor() {
         this.baseUrl = "https://search.naver.com/search.naver";
     }
+<<<<<<< HEAD
+    async scrapeNews(query) {
+=======
     async scrapeNews() {
+>>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
         try {
             const response = await axios_1.default.get(this.baseUrl, {
                 params: {
                     where: "news",
+<<<<<<< HEAD
+                    query,
+=======
                     query: "대학입시",
+>>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
                     sort: 1,
                 },
             });
@@ -29,8 +37,28 @@ let NewsService = class NewsService {
                 const title = $(element).find(".news_tit").text().trim();
                 const link = $(element).find(".news_tit").attr("href") || "";
                 const date = $(element).find(".info").text().trim();
+<<<<<<< HEAD
+                const source = $(element).find(".press").text().trim();
+                let thumbnail = $(element).find(".news_contents img").attr("data-lazysrc") ||
+                    $(element).find(".news_contents img").attr("src") ||
+                    "";
+                if (thumbnail.startsWith("data:image/gif;base64,")) {
+                    thumbnail = "https://via.placeholder.com/400x200?text=No+Image";
+                }
+                if (thumbnail && thumbnail.startsWith("//")) {
+                    thumbnail = `https:${thumbnail}`;
+                }
+                newsItems.push({
+                    title,
+                    link,
+                    date,
+                    source,
+                    thumbnail: thumbnail || "https://via.placeholder.com/400x200?text=No+Image",
+                });
+=======
                 const source = $(element).find(".info press").text().trim();
                 newsItems.push({ title, link, date, source });
+>>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
             });
             return newsItems;
         }
