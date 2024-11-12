@@ -205,5 +205,7 @@ thumb
 sketch
 
 client/.next
-
+client/.next/
+server/dist
+server/dist/
 # End of https://www.toptal.com/developers/gitignore/api/nextjs,git,node,react,nesc
