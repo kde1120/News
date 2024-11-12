@@ -8,12 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-<<<<<<< HEAD
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-=======
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NewsController = void 0;
 const common_1 = require("@nestjs/common");
@@ -22,15 +19,9 @@ let NewsController = class NewsController {
     constructor(newsService) {
         this.newsService = newsService;
     }
-<<<<<<< HEAD
     async getNews(query = "대학입시") {
         try {
             return await this.newsService.scrapeNews(query);
-=======
-    async getNews() {
-        try {
-            return await this.newsService.scrapeNews();
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
         }
         catch (error) {
             console.error("Error fetching news:", error);
@@ -41,14 +32,9 @@ let NewsController = class NewsController {
 exports.NewsController = NewsController;
 __decorate([
     (0, common_1.Get)(),
-<<<<<<< HEAD
     __param(0, (0, common_1.Query)("query")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
-=======
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
     __metadata("design:returntype", Promise)
 ], NewsController.prototype, "getNews", null);
 exports.NewsController = NewsController = __decorate([

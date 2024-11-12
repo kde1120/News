@@ -1,20 +1,6 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-<<<<<<< HEAD
     "lib": ["dom", "dom.iterable", "esnext"],
-=======
-=======
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-<<<<<<< HEAD
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
-=======
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -25,8 +11,6 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
@@ -35,21 +19,4 @@
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
-=======
-=======
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
-    "jsx": "preserve"
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
-<<<<<<< HEAD
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
-=======
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
 }

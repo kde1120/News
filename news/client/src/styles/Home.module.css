@@ -1,62 +1,41 @@
 .container {
-  padding: 2rem;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  background: #f8f9fa;
-  min-height: 100vh;
+  padding: 2rem;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 3rem;
-  padding: 3rem;
-  background: #ffffff;
-  color: #1a1a1a;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-}
-
-.header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(120deg, #2563eb, #3b82f6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
 }
 
 .searchForm {
   display: flex;
   gap: 1rem;
-  justify-content: center;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 .searchInput {
   flex: 1;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1rem;
   border: 2px solid #e5e7eb;
-  border-radius: 12px;
+  border-radius: 0.5rem;
   font-size: 1.1rem;
-  outline: none;
   transition: all 0.3s ease;
-  background: #f3f4f6;
 }
 
 .searchInput:focus {
+  outline: none;
   border-color: #3b82f6;
-  background: #ffffff;
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
 }
 
 .searchButton {
-  padding: 1rem 2rem;
+  padding: 0.75rem 2rem;
   background: #3b82f6;
   color: white;
   border: none;
-  border-radius: 12px;
+  border-radius: 0.5rem;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
@@ -66,34 +45,16 @@
 .searchButton:hover {
   background: #2563eb;
   transform: translateY(-2px);
-=======
-  max-width: 1200px;
-  margin: 0 auto;
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
-=======
-  max-width: 1200px;
-  margin: 0 auto;
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
 }
 
 .newsGrid {
   display: grid;
-<<<<<<< HEAD
-<<<<<<< HEAD
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-=======
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
-=======
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .newsCard {
-<<<<<<< HEAD
-<<<<<<< HEAD
   background: white;
   border-radius: 20px;
   overflow: hidden;
@@ -101,23 +62,10 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   cursor: pointer;
   position: relative;
-=======
-=======
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
-  padding: 1.5rem;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: transform 0.2s;
-<<<<<<< HEAD
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
-=======
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
 }
 
 .newsCard:hover {
   transform: translateY(-5px);
-<<<<<<< HEAD
-<<<<<<< HEAD
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -141,7 +89,6 @@
   color: #1a1a1a;
   text-decoration: none;
   transition: color 0.2s;
-  cursor: pointer;
 }
 
 .newsContent a:hover {
@@ -162,36 +109,6 @@
   padding: 4rem;
   color: #6b7280;
   font-size: 1.2rem;
-}
-
-.scrapButton {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  border: 2px solid #3b82f6;
-  border-radius: 8px;
-  background: transparent;
-  color: #3b82f6;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.scrapButton:hover {
-  background: #3b82f6;
-  color: white;
-}
-
-.scrapButton.scrapped {
-  background: #3b82f6;
-  color: white;
-}
-
-.noResults {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 2rem;
-  color: #6b7280;
-  font-size: 1.1rem;
 }
 
 .starButton {
@@ -221,27 +138,11 @@
   color: #3b82f6;
   background: white;
 }
-=======
-=======
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
 
-.newsCard h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.2rem;
+.noResults {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+  font-size: 1.1rem;
 }
-
-.newsCard a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.newsCard a:hover {
-  text-decoration: underline;
-<<<<<<< HEAD
-} 
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
-=======
-} 
->>>>>>> cfaeead9e127614e53e66f4709bb06b09175a1bc
