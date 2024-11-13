@@ -3,4 +3,5 @@ export interface News {
   link: string;
   date: string;
   source: string;
+  thumbnail: string;
 }

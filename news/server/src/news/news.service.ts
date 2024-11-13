@@ -7,18 +7,19 @@ export interface News {
   link: string;
   date: string;
   source: string;
+  thumbnail: string;
 }
 
 @Injectable()
 export class NewsService {
   private readonly baseUrl: string = "https://search.naver.com/search.naver";
 
-  async scrapeNews(): Promise<News[]> {
+  async scrapeNews(query: string): Promise<News[]> {
     try {
       const response = await axios.get(this.baseUrl, {
         params: {
           where: "news",
-          query: "대학입시",
+          query,
           sort: 1,
         },
       });
@@ -30,9 +31,26 @@ export class NewsService {
         const title = $(element).find(".news_tit").text().trim();
         const link = $(element).find(".news_tit").attr("href") || "";
         const date = $(element).find(".info").text().trim();
-        const source = $(element).find(".info press").text().trim();
+        const source = $(element).find(".press").text().trim();
+        let thumbnail = $(element).find(".news_contents img").attr("data-lazysrc") ||
+          $(element).find(".news_contents img").attr("src") ||
+          "";
 
-        newsItems.push({ title, link, date, source });
+        if (thumbnail.startsWith("data:image/gif;base64,")) {
+          thumbnail = "https://via.placeholder.com/400x200?text=No+Image";
+        }
+
+        if (thumbnail && thumbnail.startsWith("//")) {
+          thumbnail = `https:${thumbnail}`;
+        }
+
+        newsItems.push({
+          title,
+          link,
+          date,
+          source,
+          thumbnail: thumbnail || "https://via.placeholder.com/400x200?text=No+Image",
+        });
       });
 
       return newsItems;

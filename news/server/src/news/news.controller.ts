@@ -1,4 +1,4 @@
-import { Controller, Get } from "@nestjs/common";
+import { Controller, Get, Query } from "@nestjs/common";
 import { NewsService } from "./news.service";
 
 @Controller("news")
@@ -6,9 +6,9 @@ export class NewsController {
   constructor(private readonly newsService: NewsService) {}
 
   @Get()
-  async getNews() {
+  async getNews(@Query("query") query: string = "대학입시") {
     try {
-      return await this.newsService.scrapeNews();
+      return await this.newsService.scrapeNews(query);
     } catch (error) {
       console.error("Error fetching news:", error);
       throw error;
