@@ -58,11 +58,12 @@ export default function Home() {
         </div>
       ) : (
         <div className={styles.newsGrid}>
-          {news.map((item) => (
-            <NewsCard 
-              key={item.link} 
-              news={item}
-            />
+          {news.map((item, index) => (
+            <div key={item.link} style={{"--index": index} as React.CSSProperties}>
+              <NewsCard 
+                news={item}
+              />
+            </div>
           ))}
         </div>
       )}

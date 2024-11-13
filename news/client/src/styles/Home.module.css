@@ -1,12 +1,19 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  animation: fadeScale 0.8s ease-out;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #1d1d1f;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .searchForm {
@@ -14,59 +21,72 @@
   gap: 1rem;
   max-width: 600px;
   margin: 2rem auto;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(20px);
+  animation: slideUpFade 0.8s ease-out;
+  transition: all 0.3s ease;
+}
+
+.searchForm:focus-within {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .searchInput {
   flex: 1;
-  padding: 0.75rem 1rem;
-  border: 2px solid #e5e7eb;
-  border-radius: 0.5rem;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.05);
+  color: #1d1d1f;
 }
 
 .searchInput:focus {
   outline: none;
-  border-color: #3b82f6;
+  background: rgba(0, 0, 0, 0.08);
 }
 
 .searchButton {
-  padding: 0.75rem 2rem;
-  background: #3b82f6;
+  padding: 0.8rem 1.5rem;
+  background: #000000;
   color: white;
   border: none;
-  border-radius: 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .searchButton:hover {
-  background: #2563eb;
-  transform: translateY(-2px);
+  background: #333333;
 }
 
 .newsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  animation: fadeIn 1s ease-out;
 }
 
 .newsCard {
   background: white;
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  animation: fadeScale 0.5s ease-out;
+  animation-fill-mode: both;
 }
 
 .newsCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .thumbnail {
@@ -80,35 +100,30 @@
 }
 
 .newsContent h2 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 500;
   margin-bottom: 1rem;
   line-height: 1.4;
+  color: #1d1d1f;
 }
 
 .newsContent a {
-  color: #1a1a1a;
+  color: inherit;
   text-decoration: none;
-  transition: color 0.2s;
 }
 
 .newsContent a:hover {
-  color: #3b82f6;
-  text-decoration: underline;
+  color: #06c;
 }
 
 .newsInfo {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
-  color: #6b7280;
+  color: #86868b;
   font-size: 0.9rem;
-}
-
-.loading {
-  text-align: center;
-  padding: 4rem;
-  color: #6b7280;
-  font-size: 1.2rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f5f5f7;
 }
 
 .starButton {
@@ -117,32 +132,50 @@
   right: 1rem;
   background: rgba(255, 255, 255, 0.9);
   border: none;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.2s;
-  color: #3b82f6;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  font-size: 1.2rem;
+  color: #1d1d1f;
+  backdrop-filter: blur(10px);
+  animation: fadeScale 0.3s ease-out;
 }
 
 .starButton:hover {
-  transform: scale(1.1);
+  background: #000000;
+  color: white;
+  animation: float 2s infinite ease-in-out;
 }
 
 .starred {
-  color: #3b82f6;
-  background: white;
+  background: #000000;
+  color: white;
+  animation: fadeScale 0.3s ease-out;
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem;
+  color: #86868b;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg, #f6f6f6 25%, #f0f0f0 50%, #f6f6f6 75%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
 }
 
 .noResults {
-  grid-column: 1 / -1;
   text-align: center;
-  padding: 2rem;
-  color: #6b7280;
+  padding: 4rem;
+  color: #86868b;
   font-size: 1.1rem;
+  grid-column: 1 / -1;
+}
+
+.newsGrid > * {
+  animation-delay: calc(0.1s * var(--index));
 }
